@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <body>
-    <img src="https://cdn.discordapp.com/attachments/811281992741027902/874290695119188018/image0.gif" style="width: 24%;">
-    <img src="https://cdn.discordapp.com/attachments/811281992741027902/874290695119188018/image0.gif" style="width: 24%;">
-    <img src="https://cdn.discordapp.com/attachments/811281992741027902/874290695119188018/image0.gif" style="width: 24%;">
-    <img src="https://cdn.discordapp.com/attachments/811281992741027902/874290695119188018/image0.gif" style="width: 24%;">
-    <img src="https://cdn.discordapp.com/attachments/811281992741027902/874290695119188018/image0.gif" style="width: 24%;">
-    <img src="https://cdn.discordapp.com/attachments/811281992741027902/874290695119188018/image0.gif" style="width: 24%;">
-    <img src="https://cdn.discordapp.com/attachments/811281992741027902/874290695119188018/image0.gif" style="width: 24%;">
-    <img src="https://cdn.discordapp.com/attachments/811281992741027902/874290695119188018/image0.gif" style="width: 24%;">
-    <img src="https://cdn.discordapp.com/attachments/811281992741027902/874290695119188018/image0.gif" style="width: 24%;">
-    <img src="https://cdn.discordapp.com/attachments/811281992741027902/874290695119188018/image0.gif" style="width: 24%;">
-    <img src="https://cdn.discordapp.com/attachments/811281992741027902/874290695119188018/image0.gif" style="width: 24%;">
-    <img src="https://cdn.discordapp.com/attachments/811281992741027902/874290695119188018/image0.gif" style="width: 24%;">
-    <img src="https://cdn.discordapp.com/attachments/811281992741027902/874290695119188018/image0.gif" style="width: 24%;">
-    <img src="https://cdn.discordapp.com/attachments/811281992741027902/874290695119188018/image0.gif" style="width: 24%;">
-    <img src="https://cdn.discordapp.com/attachments/811281992741027902/874290695119188018/image0.gif" style="width: 24%;">
-    <img src="https://cdn.discordapp.com/attachments/811281992741027902/874290695119188018/image0.gif" style="width: 24%;">
+    <script>
+        var body = document.getElementsByTagName("body")[0];
+        var total = 50;
+        let imgs = [];
+
+        for (var i = 0; i < total; ++i) {
+            var img = document.createElement("img");
+            img.src = "./cat.gif";
+            img.style.width = "9.8%";
+            img.style.transform = "rotate(".concat((i * 36).toString(), "deg)");
+            imgs.push(img);
+            body.appendChild(img);
+        }
+        
+        var inc = 0;
+
+        window.setInterval(function() {
+            for (var i = 0; i < total; ++i) {
+                imgs[i].style.transform = "rotate(".concat((i * 36 + inc * 5).toString(), "deg)");
+                console.log("rotate(".concat((i * 36 + inc * 1).toString(), "deg)"))
+            }
+            inc++
+        }, 60);
+    </script>
 </body>
